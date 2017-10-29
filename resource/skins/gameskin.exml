@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameskin" width="607" height="950" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="gamebg_png" x="0" y="0" locked="true"/>
+	<e:Image source="gameui1_png" x="0" y="0" locked="true"/>
+	<e:Image source="conveyer_png" x="232.24" y="122.27" anchorOffsetY="0" height="825.99"/>
+	<e:Label text="0" x="455" y="83.5" textColor="0x000000" anchorOffsetX="0" width="73" textAlign="center"/>
+	<e:Group id="gp_conveyor" width="97.67" height="818.66" x="255.33" y="129.33" anchorOffsetX="0" anchorOffsetY="0"/>
+</e:Skin>

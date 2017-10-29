@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="start" width="607" height="950" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*">
+	<e:Group width="607" height="950" x="0" y="0">
+		<e:Image source="bg_png" x="0" y="0"/>
+		<e:Button label="" x="138" y="755.12">
+			<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_play_png" source.down="btn_play1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:EditableText width="300" height="50" text="Conveyer Game" x="169" y="164.2" textColor="0x000000" size="40" fontFamily="Arial"/>
+	</e:Group>
+</e:Skin>
