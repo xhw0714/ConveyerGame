@@ -28,13 +28,22 @@ var Bottle = (function (_super) {
     //设置参数为枚举的类型
     function Bottle(type) {
         var _this = _super.call(this) || this;
-        //设置瓶子的类型
-        _this.bottleType = type;
-        //获取瓶子的资源素材
-        var str = "bottle" + type + "_png";
-        _this.source = RES.getRes(str);
+        _this.BottleType = type;
         return _this;
     }
+    Object.defineProperty(Bottle.prototype, "BottleType", {
+        get: function () {
+            return this._BottleType;
+        },
+        set: function (v) {
+            this._BottleType = v;
+            //获取瓶子的资源素材
+            var str = "bottle" + v + "_png";
+            this.source = RES.getRes(str);
+        },
+        enumerable: true,
+        configurable: true
+    });
     Object.defineProperty(Bottle.prototype, "IsSelected", {
         get: function () {
             return this._IsSelected;

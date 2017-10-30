@@ -9,15 +9,23 @@ class Bottle extends eui.Image {
 	//设置参数为枚举的类型
 	public constructor(type: BottleType) {
 		super();
-		//设置瓶子的类型
-		this.bottleType = type;
-		//获取瓶子的资源素材
-		var str = "bottle" + <number>type + "_png";
-		this.source = RES.getRes(str);
+		this.BottleType = type;
 	}
 	//给一个瓶子类型属性
 	public bottleType: BottleType;
 
+	
+	private _BottleType : BottleType;
+	public get BottleType() : BottleType {
+		return this._BottleType;
+	}
+	public set BottleType(v : BottleType) {
+		this._BottleType = v;
+		//获取瓶子的资源素材
+		var str = "bottle" + <number>v + "_png";
+		this.source = RES.getRes(str);
+	}
+	
 	//判断是否选中瓶子
 	private _IsSelected: boolean;
 	public get IsSelected(): boolean {
@@ -32,6 +40,4 @@ class Bottle extends eui.Image {
 			this.alpha = 1;
 		}
 	}
-
-
 }

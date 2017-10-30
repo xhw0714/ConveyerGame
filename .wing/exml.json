@@ -1,8 +1,8 @@
 {
   "global": {
-    "globalAutoLayerMarkEnable": true,
-    "globalRulerEnable": false,
-    "globalAdsorbEnable": false
+    "globalAutoLayerMarkEnable": false,
+    "globalRulerEnable": true,
+    "globalAdsorbEnable": true
   },
   "15f63594e9c": {
     "backgroundX": 0,

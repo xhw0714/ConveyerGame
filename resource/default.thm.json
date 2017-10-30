@@ -1,5 +1,6 @@
 {
   "skins": {},
-  "autoGenerateExmlsList": true,
-  "exmls": []
+  "exmls": ["resource/skins/GameSkin.exml",
+    "resource/skins/PackSkin.exml",
+    "resource/skins/StartGame.exml"]
 }

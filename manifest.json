@@ -4,7 +4,8 @@
 		"libs/modules/egret/egret.web.js",
 		"libs/modules/res/res.js",
 		"libs/modules/eui/eui.js",
-		"libs/modules/tween/tween.js"
+		"libs/modules/tween/tween.js",
+		"promise/bin/promise.js"
 	],
 	"game": [
 		"bin-debug/AssetAdapter.js",
@@ -12,6 +13,8 @@
 		"bin-debug/Game.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
+		"bin-debug/Package.js",
+		"bin-debug/SrartGame.js",
 		"bin-debug/ThemeAdapter.js"
 	]
 }

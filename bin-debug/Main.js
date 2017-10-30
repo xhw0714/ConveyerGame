@@ -148,8 +148,10 @@ var Main = (function (_super) {
      * Create scene interface
      */
     Main.prototype.startCreateScene = function () {
+        //先让游戏偷跑。然后点击开始按钮后重置所有。这样可以防止有个瓶子跑出来
+        Game.getInstance();
         //添加游戏场景
-        this.addChild(new Game());
+        this.addChild(new SrartGame());
     };
     /**
      * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
