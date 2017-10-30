@@ -11,7 +11,7 @@
   "template": {},
   "eui": {
     "exmlRoot": [
-      "resource/eui_skins"
+      "resource/skins"
     ],
     "themes": [
       "resource/default.thm.json"

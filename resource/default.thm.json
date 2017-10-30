@@ -1,6 +1,8 @@
 {
   "skins": {},
-  "exmls": ["resource/skins/GameSkin.exml",
+  "exmls": [
     "resource/skins/PackSkin.exml",
-    "resource/skins/StartGame.exml"]
+    "resource/skins/GameSkin.exml",
+    "resource/skins/StartGame.exml"
+  ]
 }
