@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameSkin" width="607" height="950" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="gamebg_png" x="0" y="0"/>
+	<e:Group id="ConveyorPlay" width="145.4" height="884.12" x="232.36" y="59" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="conveyer1_png" x="-11.12" y="11"/>
+		<e:Image source="conveyer1_png" x="-1.1199999999999992" y="21"/>
+		<e:Image source="conveyer1_png" x="-1.1199999999999992" y="21"/>
+		<e:Image source="conveyer1_png" x="8.88" y="31"/>
+		<e:Image source="conveyer1_png" x="18.880000000000003" y="41"/>
+		<e:Image source="conveyer1_png" x="28.880000000000003" y="51"/>
+		<e:Image source="conveyer1_png" x="38.88" y="61"/>
+		<e:Image source="conveyer1_png" x="48.88" y="71"/>
+		<e:Image source="conveyer1_png" x="58.88" y="81"/>
+		<e:Image source="conveyer1_png" x="68.88" y="91"/>
+		<e:Image source="conveyer1_png" x="78.88" y="101"/>
+		<e:Image source="conveyer1_png" x="88.88" y="111"/>
+		<e:Image source="conveyer1_png" x="98.88" y="121"/>
+		<e:Image source="conveyer1_png" x="108.88" y="131"/>
+		<e:Image source="conveyer1_png" x="118.88" y="141"/>
+		<e:Image source="conveyer1_png" x="128.88" y="151"/>
+		<e:layout>
+			<e:TileLayout verticalGap="0"/>
+		</e:layout>
+	</e:Group>
+	<e:Image source="gameui1_png" x="0" y="0"/>
+	<e:Label id="GameScore" text="0" x="455" y="83.5" textColor="0x000000" anchorOffsetX="0" width="73" textAlign="center"/>
+	<e:Group id="gp_conveyor" width="97.67" height="818.66" x="255.33" y="129.33" anchorOffsetX="0" anchorOffsetY="0" locked="true"/>
+	<e:Group id="Packages" x="0" y="200.59000000000003" width="606.06" height="750" locked="true">
+		<ns1:Package width="146" height="231" x="0" y="2.000000000000256" anchorOffsetX="0" anchorOffsetY="0" Pos="1" skinName="PackSkin"/>
+		<ns1:Package width="146" height="231" x="458.9999999999994" y="0" anchorOffsetX="0" anchorOffsetY="0" Pos="4" skinName="PackSkin"/>
+		<ns1:Package width="146" height="231" x="458.9999999999994" y="249.8800000000005" anchorOffsetX="0" anchorOffsetY="0" Pos="5" skinName="PackSkin"/>
+		<ns1:Package width="146" height="231" x="0" y="249.8800000000005" anchorOffsetX="0" anchorOffsetY="0" Pos="2" skinName="PackSkin"/>
+		<ns1:Package width="146" height="231" x="0" y="515.0300000000002" anchorOffsetX="0" anchorOffsetY="0" Pos="3" skinName="PackSkin"/>
+		<ns1:Package width="146" height="231" x="458.9999999999994" y="515.0300000000002" anchorOffsetX="0" anchorOffsetY="0" Pos="6" skinName="PackSkin"/>
+	</e:Group>
+	<e:Group id="GameOverGP" left="0" right="0" top="0" bottom="0">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+		<e:Image source="overrole_png" x="190.03" y="405"/>
+		<e:Image source="overpanel_png" x="73" y="23.33"/>
+		<e:Label text="分数" x="208" y="198" size="45" bold="true"/>
+		<e:Label id="OverScore" text="0" x="347.06" y="197" size="46" anchorOffsetX="0" width="121.94" textAlign="left"/>
+		<e:Button id="Restart" label="" y="764.99" horizontalCenter="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_replay_png" source.down="btn_replay1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Button id="BackMenu" label="" y="856.49" horizontalCenter="0">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="btn_start_png" source.down="btn_start1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+		<e:Label text="Game Over" x="129.29" anchorOffsetX="0" width="349.75" anchorOffsetY="0" height="37.57" bold="true" size="35" textAlign="center" verticalAlign="justify" verticalCenter="-323"/>
+	</e:Group>
+	
+</e:Skin>

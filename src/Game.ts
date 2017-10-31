@@ -24,8 +24,8 @@ class Game extends eui.Component {
     //回到菜单按钮
     public BackMenu: eui.Button;
     //传送带动画
-    public ConveyorPlay:eui.Group;
-    
+    public ConveyorPlay: eui.Group;
+
 
 
 
@@ -60,10 +60,10 @@ class Game extends eui.Component {
         this.Restart.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onclickReStart, this);
         //回到菜单按钮
         this.BackMenu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.MainMenu, this);
-   
 
- }
-    private isPaused:boolean = true;
+
+    }
+    private isPaused: boolean = true;
 
     //记录上一次时间
     private lasttime: number = 0;
@@ -109,7 +109,7 @@ class Game extends eui.Component {
         }
         //传送带动画处理
         this.ConveyorPlay.anchorOffsetY -= dt * 100;
-        if(this.ConveyorPlay.anchorOffsetY <= -56){
+        if (this.ConveyorPlay.anchorOffsetY <= -56) {
             this.ConveyorPlay.anchorOffsetY = 0;
         }
         return false;
@@ -152,6 +152,7 @@ class Game extends eui.Component {
         if (this.selBottle != null) {
             this.selBottle.IsSelected = false;
         }
+        if(!this.pickupBottle.visible)return;
         //隐藏捡起的瓶子
         this.pickupBottle.visible = false;
         //取得鼠标抬起时的坐标点
@@ -160,12 +161,13 @@ class Game extends eui.Component {
         for (var i = 0; i < this.Packages.numChildren; i++) {
             //获得当前箱子
             var Pack = <Package>this.Packages.getChildAt(i);
-            if(Pack.isPacking){continue;}
+            if (Pack.isPacking) { continue; }
             //获取箱子的位置
             var rect = new egret.Rectangle(Pack.x, Pack.y, Pack.width, Pack.height);
             //判断鼠标抬起时的坐标在不在箱子的方位，并且判断箱子的类型等不等于瓶子的类型
             //特地说明，瓶子的BottleType用[1,2,3,4,5,6]存放，箱子也一样
             if (rect.containsPoint(checkpt)) {
+                console.log(1)
                 if (Pack.Pos == this.pickupBottle.BottleType) {
                     if (!Pack.addBottle(this.pickupBottle)) {
                         this.score += 5;
@@ -173,23 +175,23 @@ class Game extends eui.Component {
                     this.score += 1;
                     this.gp_conveyor.removeChild(this.selBottle);//移除瓶子
                     break;
-                }else{
+                } else {
                     this.GameOver();
                 }
             }
-
+            
         }
     }
     //游戏结束
     private GameOver() {
         this.GameOverGP.visible = true;
         //循环遍历界面的元素，添加动画
-         for (var i = 0; i < this.GameOverGP.numChildren; i++) {
+        for (var i = 0; i < this.GameOverGP.numChildren; i++) {
             var item = this.GameOverGP.getChildAt(i);
             item.alpha = 0;
-            egret.Tween.get(item).wait(i*200).to({"alpha":1},500);
-         }
-         this.isPaused = true;
+            egret.Tween.get(item).wait(i * 200).to({ "alpha": 1 }, 500);
+        }
+        this.isPaused = true;
     }
 
     //监听游戏分数
@@ -213,11 +215,11 @@ class Game extends eui.Component {
             Pack.clearBottle();
         }
         //循环遍历界面的元素，添加动画
-         for (var i = 0; i < this.Packages.numChildren; i++) {
+        for (var i = 0; i < this.Packages.numChildren; i++) {
             var item = this.Packages.getChildAt(i);
-            item.anchorOffsetY= -800;
-            egret.Tween.get(item).wait(i*200).to({"anchorOffsetY":0},500);
-         }
+            item.anchorOffsetY = -800;
+            egret.Tween.get(item).wait(i * 200).to({ "anchorOffsetY": 0 }, 500);
+        }
     }
     //同开始页面切换原理
     private MainMenu() {

@@ -135,6 +135,8 @@ var Game = (function (_super) {
         if (this.selBottle != null) {
             this.selBottle.IsSelected = false;
         }
+        if (!this.pickupBottle.visible)
+            return;
         //隐藏捡起的瓶子
         this.pickupBottle.visible = false;
         //取得鼠标抬起时的坐标点
@@ -151,6 +153,7 @@ var Game = (function (_super) {
             //判断鼠标抬起时的坐标在不在箱子的方位，并且判断箱子的类型等不等于瓶子的类型
             //特地说明，瓶子的BottleType用[1,2,3,4,5,6]存放，箱子也一样
             if (rect.containsPoint(checkpt)) {
+                console.log(1);
                 if (Pack.Pos == this.pickupBottle.BottleType) {
                     if (!Pack.addBottle(this.pickupBottle)) {
                         this.score += 5;
